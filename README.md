@@ -1,6 +1,4 @@
 # Movie Recommendation System
-
-## Overview
 This project is a movie recommendation system that suggests similar movies based on their overviews. It utilizes data from movie datasets, processes it, and generates JSON files that can be used for recommendations.
 
 ## Getting Started
