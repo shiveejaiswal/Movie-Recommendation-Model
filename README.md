@@ -79,7 +79,7 @@ pip install pandas numpy scikit-learn
 3. **Start the Frontend**:
    - Navigate to the frontend directory in your terminal.
    - Run the following command to start the frontend:
-   
+
    ```bash
    npm run dev
    ```
@@ -91,4 +91,4 @@ Once both the backend and frontend are running, the project is up and running! Y
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request.
 
 ## Acknowledgments
-- Thank you to the creators of the datasets used in this project.
+Thank you to the creators of the datasets used in this project.
