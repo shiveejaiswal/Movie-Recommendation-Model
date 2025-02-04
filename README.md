@@ -46,10 +46,11 @@ pip install pandas numpy scikit-learn
 3. **Store the API Key**: 
    - Create a `.env` file in the project directory if it does not already exist.
    - Add the following line to the `.env` file, replacing `your_api_key_here` with your actual TMDB API key:
+
    ```
    VITE_TMDB_API_KEY=your_api_key_here
    ```
-   
+
 ### Dataset
 1. **Download the Datasets**: 
    - You will need to download the following datasets:
@@ -70,6 +71,7 @@ pip install pandas numpy scikit-learn
 2. **Start the Backend**:
    - Navigate to the backend directory in your terminal.
    - Run the following command to start the backend server:
+
    ```bash
    node server.js
    ```
@@ -77,6 +79,7 @@ pip install pandas numpy scikit-learn
 3. **Start the Frontend**:
    - Navigate to the frontend directory in your terminal.
    - Run the following command to start the frontend:
+   
    ```bash
    npm run dev
    ```
