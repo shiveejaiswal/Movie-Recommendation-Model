@@ -63,6 +63,13 @@ pip install pandas numpy scikit-learn
 3. **Place the Datasets**: 
    - Extract the CSV files and move them into the `datasets` folder.
 
+### Install Frontend Dependencies
+Before running the project, navigate to the project directory and install the required dependencies:
+
+```bash
+npm install
+```
+
 ### Running the Project
 1. **Run the Jupyter Notebook**:
    - Open the Jupyter notebook file (`Movie.ipynb`) in your preferred environment.
