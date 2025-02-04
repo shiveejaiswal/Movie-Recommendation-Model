@@ -1,0 +1,126 @@
+.movie-details {
+  min-height: calc(100vh - 4rem);
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.movie-header {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #1c1c1c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+  position: relative;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.movie-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 26rem;
+  color: var(--text-secondary);
+}
+
+.rating {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.overview {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 35rem;
+  margin-left: 25rem;
+  margin-right: 5rem;
+  color: var(--text-color);
+}
+
+.cast-crew {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #292929;
+  border-radius: 12px;
+}
+
+.cast,
+.crew {
+  width: 48%;
+}
+
+.cast h3,
+.crew h3 {
+  margin-bottom: 0.75rem;
+}
+
+.cast-crew ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cast-crew li {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .movie-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .movie-poster {
+    position: relative;
+    top: 0;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .movie-info {
+    margin-top: 2rem;
+  }
+
+  .cast-crew {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

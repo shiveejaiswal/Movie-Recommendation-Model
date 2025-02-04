@@ -1,0 +1,105 @@
+<<<<<<< HEAD
+.home-container {
+  min-height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: white; /* Set default text color to white */
+}
+
+.search-container {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  background-color: rgba(255, 255, 255, 0.2); /* Lighter background for input */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Lighter border */
+  border-radius: 9999px;
+  color: white; /* Set input text color to white */
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter placeholder color */
+  }
+
+  outline: none;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.search-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-image: linear-gradient(
+    to right,
+    #4a90e2,
+    #50e3c2
+  ); /* Gradient colors */
+  color: white; /* Set button text color to white */
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.title-gradient {
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent; /* Keep this for gradient text */
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    #4a90e2,
+    #50e3c2
+  ); /* Gradient colors */
+  margin-bottom: 2rem;
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
+}
+=======
+/* Ensure the grid layout is responsive */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Add hover animations */
+.transform {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Ensure images maintain aspect ratio */
+.aspect-w-2 {
+  position: relative;
+  width: 100%;
+  padding-top: 150%;
+  /* 2:3 aspect ratio */
+}
+
+.aspect-h-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+>>>>>>> parent of b734fae (changes in css)
