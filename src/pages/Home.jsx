@@ -1,36 +1,86 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import './Home.css';
-=======
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
+import "./Home.css"
 
->>>>>>> parent of b734fae (changes in css)
 const Home = () => {
-  const [title, setTitle] = useState('');
-  const navigate = useNavigate();
+  const [title, setTitle] = useState("")
+  const [suggestions, setSuggestions] = useState([]) // State for suggestions
+  const navigate = useNavigate()
+
+  // Sample movie titles for demonstration
+  const movieTitles = ["Inception", "The Matrix", "Interstellar", "Avatar", "Titanic", "The Godfather", "Pulp Fiction"]
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    navigate(`/recommendations?title=${encodeURIComponent(title)}`);
-  };
+    e.preventDefault()
+    if (title.trim()) {
+      navigate(`/recommendations?title=${encodeURIComponent(title)}`)
+    }
+  }
+
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value
+    setTitle(inputValue)
+
+    // Filter suggestions based on input
+    if (inputValue) {
+      const filteredSuggestions = movieTitles.filter(movie =>
+        movie.toLowerCase().includes(inputValue.toLowerCase())
+      )
+      setSuggestions(filteredSuggestions)
+    } else {
+      setSuggestions([]) // Clear suggestions if input is empty
+    }
+  }
+
+  const handleSuggestionClick = (suggestion) => {
+    setTitle(suggestion) // Set the title to the clicked suggestion
+    setSuggestions([]) // Clear suggestions after selection
+    navigate(`/recommendations?title=${encodeURIComponent(suggestion)}`) // Navigate to recommendations
+  }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 home-background">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center">Movie Recommendation System</h1>
-        <form onSubmit={handleSearch} className="mb-8">
+    <div className="home-container">
+      <motion.div
+        className="title-container"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="main-title">Movie Recommendation System</h1>
+        <p className="subtitle">Discover your next favorite movie based on your current interests</p>
+      </motion.div>
+
+      <motion.div
+        className="search-section"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <form onSubmit={handleSearch}>
           <input
             type="text"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Enter movie title"
-            className="p-2 rounded-lg w-full"
+            onChange={handleInputChange} // Update input change handler
+            placeholder="Enter a movie title..."
+            className="search-input"
           />
-          <button type="submit" className="mt-2 p-2 bg-blue-600 rounded-lg">Get Recommendations</button>
+          <motion.button type="submit" className="search-button" whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
+            Get Recommendations
+          </motion.button>
         </form>
-      </div>
+        {suggestions.length > 0 && (
+          <ul className="suggestions-list">
+            {suggestions.map((suggestion, index) => (
+              <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
+                {suggestion}
+              </li>
+            ))}
+          </ul>
+        )}
+      </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -20,7 +20,7 @@ const Recommendations = () => {
         setRecommendations(response.data)
       } catch (err) {
         console.error("Error fetching recommendations:", err)
-        setError("Could not fetch recommendations. Please try again.")
+        setError("Invalid movie name or the requested movie is not found in the database.")
       } finally {
         setLoading(false)
       }

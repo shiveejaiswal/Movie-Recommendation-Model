@@ -51,15 +51,14 @@ pip install pandas numpy scikit-learn
 
 ### Dataset
 1. **Download the Datasets**: 
-   - You will need to download the following datasets:
-     - [Movie Credits Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_credits.csv)
+   - You will need to download the zip file of the datasets from the following link:
      - [Movie Details Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv)
 
 2. **Create a Datasets Folder**: 
    - In the project directory, create a folder named `datasets` if it does not already exist.
 
 3. **Place the Datasets**: 
-   - Extract the CSV files and move them into the `datasets` folder.
+   - Extract the CSV files from the zip and move *both* of them into the `datasets` folder.
 
 ### Install Frontend Dependencies
 Before running the project, navigate to the project directory and install the required dependencies:
