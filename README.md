@@ -56,7 +56,7 @@ pip install pandas numpy scikit-learn
    - Create a `.env` file in the project directory if it does not already exist.
    - Add the following line to the `.env` file, replacing `your_api_key_here` with your actual TMDB API key:
 
-   ```
+   ```bash
    VITE_TMDB_API_KEY=your_api_key_here
    ```
 
@@ -65,7 +65,7 @@ pip install pandas numpy scikit-learn
 1. **Download the Datasets**:
 
    - You will need to download the zip file of the datasets from the following link:
-     - [Movie Details Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv)
+     [Movie Details Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv)
 
 2. **Create a Datasets Folder**:
 
@@ -84,23 +84,27 @@ npm install
 
 ### Running the Project
 
-1. **Run the Jupyter Notebook**:
+1. **Create a Data Folder**:
+
+   - In the project directory, create a folder named `data` if it does not already exist. This is where the processed data will be stored
+
+2. **Run the Jupyter Notebook**:
 
    - Open the Jupyter notebook file (`Movie.ipynb`) in your preferred environment.
    - Run all the cells in the notebook. This will process the datasets and generate the necessary JSON files for movie recommendations.
 
-2. **Start the Backend**:
+3. **Start the Backend**:
 
-   - Navigate to the backend directory in your terminal.
+   - Navigate to the project directory in your terminal.
    - Run the following command to start the backend server:
 
    ```bash
    node server.js
    ```
 
-3. **Start the Frontend**:
+4. **Start the Frontend**:
 
-   - Navigate to the frontend directory in your terminal.
+   - Navigate to the project directory in your terminal.
    - Run the following command to start the frontend:
 
    ```bash

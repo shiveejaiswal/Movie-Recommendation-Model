@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 
 // Load JSON data using fs
-const moviesData = JSON.parse(fs.readFileSync(path.resolve('src/data/movies_cleaned.json')));
-const similarityMatrix = JSON.parse(fs.readFileSync(path.resolve('src/data/similarity_matrix.json')));
-const indices = JSON.parse(fs.readFileSync(path.resolve('src/data/indices.json')));
+const moviesData = JSON.parse(fs.readFileSync(path.resolve('data/movies_cleaned.json')));
+const similarityMatrix = JSON.parse(fs.readFileSync(path.resolve('data/similarity_matrix.json')));
+const indices = JSON.parse(fs.readFileSync(path.resolve('data/indices.json')));
 
 // Create indices mapping
 const indicesMapping = Object.fromEntries(
